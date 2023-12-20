@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6328229582581500310}
+  - component: {fileID: -3863889434003436162}
   m_Layer: 0
   m_Name: ObjetoNuvem
   m_TagString: Untagged
@@ -32,6 +33,18 @@ Transform:
   - {fileID: 4094746341367281583}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-3863889434003436162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4857136014329890521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb5429d04ea15c740b46c67b275e3962, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7319235538519581332
 GameObject:
   m_ObjectHideFlags: 0
