@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Principal : MonoBehaviour
 {
@@ -14,9 +15,13 @@ public class Principal : MonoBehaviour
 
     bool comecou;
     bool acabou;
+    public Text textoScore;
+    int pontuacao;
 
     void Start(){
         Physics.gravity = new Vector3(0.0f, -20.0f, 0.0f);
+        textoScore.text = "Toque para iniciar";
+        //textoScore.fontSize = 30;
     }
     
     void Update()
@@ -29,6 +34,9 @@ public class Principal : MonoBehaviour
 
                 jogadorFelpudo.GetComponent<Rigidbody>().useGravity = true;
                 jogadorFelpudo.GetComponent<Rigidbody>().isKinematic = false;
+
+                textoScore.text = pontuacao.ToString();
+                textoScore.fontSize = 70;
             }
             VoaFelpudo();
         }
@@ -60,7 +68,6 @@ public class Principal : MonoBehaviour
 
         novoObjeto.transform.position = new Vector3(posicaoXrandom, posicaoYrandom, novoObjeto.transform.position.z);
         novoObjeto.transform.rotation = Quaternion.Euler(novoObjeto.transform.rotation.x, rotacaoYrandom, novoObjeto.transform.rotation.y);
-
     }
 
     void VoaFelpudo(){
@@ -69,5 +76,8 @@ public class Principal : MonoBehaviour
     }
 
     void FimDeJogo(){}
-    void MarcaPonto(){}
+    void MarcaPonto(){
+        pontuacao++;
+        textoScore.text = pontuacao.ToString();
+    }
 }
