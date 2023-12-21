@@ -268,7 +268,7 @@ Transform:
   m_GameObject: {fileID: 655512348}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.19, z: -4.27}
+  m_LocalPosition: {x: 0, y: 2.19, z: -8.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -429,7 +429,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 42.29309
+  field of view: 43.74267
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -455,13 +455,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.08421792, y: -0.70207363, z: 0.084217936, w: 0.7020736}
-  m_LocalPosition: {x: 7.7, y: 2.69, z: -2.41}
+  m_LocalRotation: {x: 0.124918014, y: -0.6959853, z: 0.12491803, w: 0.69598526}
+  m_LocalPosition: {x: 8.86, y: 4.58, z: -2.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 13.681, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 20.351, y: -90, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -478,7 +478,7 @@ MonoBehaviour:
   nuvem: {fileID: 4857136014329890521, guid: 07b8ae8555411094897c2fbf147955e3, type: 3}
   pedra: {fileID: 5721650339693276140, guid: a3ef218b3be8dda438cfb081bdf92d27, type: 3}
   arbusto: {fileID: 5174423229981184366, guid: b282165af5b344446a3aff7ba1098be7, type: 3}
-  canos: {fileID: 4533994908516554828, guid: 0adc1e05e48eab34c942a3ca8fb56160, type: 3}
+  canos: {fileID: 6264125812036152637, guid: eddc2feb4afe2e845961ca38c4589d9b, type: 3}
 --- !u!1001 &1194628253
 PrefabInstance:
   m_ObjectHideFlags: 0
