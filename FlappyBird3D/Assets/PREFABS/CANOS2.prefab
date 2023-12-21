@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 2788779566840388584}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -191,9 +191,10 @@ GameObject:
   - component: {fileID: 7954884254907800701}
   - component: {fileID: 4578935624034246478}
   - component: {fileID: 5924913432510674990}
+  - component: {fileID: 3458593278931855340}
   m_Layer: 0
   m_Name: CANO
-  m_TagString: Untagged
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -263,6 +264,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3458593278931855340
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8404032255427559344}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.2232891, y: 1.2232891, z: 2.5406578}
+  m_Center: {x: 0.00000023841858, y: 0, z: 1.2816159}
 --- !u!1 &8645144424846689170
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,9 +296,10 @@ GameObject:
   - component: {fileID: 8386557009383863232}
   - component: {fileID: 3668404037110021333}
   - component: {fileID: 5245368894241574109}
+  - component: {fileID: 7921416987918678496}
   m_Layer: 0
   m_Name: CANO (1)
-  m_TagString: Untagged
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -290,7 +313,7 @@ Transform:
   m_GameObject: {fileID: 8645144424846689170}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 6.86, z: 0}
+  m_LocalPosition: {x: 0, y: 8.07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -346,3 +369,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7921416987918678496
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8645144424846689170}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.2232891, y: 1.2232891, z: 2.5406578}
+  m_Center: {x: 0.00000023841858, y: 0, z: 1.2816159}
