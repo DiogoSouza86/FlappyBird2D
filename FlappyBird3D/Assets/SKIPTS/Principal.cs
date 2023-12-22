@@ -14,6 +14,8 @@ public class Principal : MonoBehaviour
 
     public GameObject jogadorFelpudo;
 
+    public GameObject particulas;
+
     bool comecou;
     bool acabou;
     public Text textoScore;
@@ -74,6 +76,9 @@ public class Principal : MonoBehaviour
     }
 
     void VoaFelpudo(){
+        GameObject novaParticula = Instantiate(particulas);
+        novaParticula.transform.position = jogadorFelpudo.transform.position;
+
         jogadorFelpudo.GetComponent<Rigidbody>().velocity = Vector3.zero;
         jogadorFelpudo.GetComponent<Rigidbody>().velocity = new Vector3(0.0f, 10.0f,0.0f);
     }

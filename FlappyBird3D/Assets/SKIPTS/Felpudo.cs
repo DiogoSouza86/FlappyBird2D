@@ -6,6 +6,8 @@ using UnityEngine;
 public class Felpudo : MonoBehaviour
 {
     public GameObject cameraPrincipal;
+    public AudioClip somPonto;
+    public AudioClip somBate;
     void OnTriggerEnter(Collider objeto)
     {
         if(objeto.gameObject.tag == "Finish"){
@@ -13,6 +15,8 @@ public class Felpudo : MonoBehaviour
             GetComponent<Rigidbody>().velocity = new Vector3(0.0f, 8.5f,-10.0f);
             GetComponent<Rigidbody>().AddTorque(new Vector3(-100.0f, -100.0f,-100.0f));
             cameraPrincipal.SendMessage("FimDeJogo");
+            GetComponent<AudioSource>().PlayOneShot(somBate);
+
         }
     }
 
@@ -21,6 +25,7 @@ public class Felpudo : MonoBehaviour
         if(objeto.gameObject.tag == "GameController"){
             Destroy(objeto.gameObject);
             cameraPrincipal.SendMessage("MarcaPonto");
+            GetComponent<AudioSource>().PlayOneShot(somPonto);
         }
     }
 }
