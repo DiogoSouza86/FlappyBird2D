@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Principal : MonoBehaviour
@@ -27,18 +28,20 @@ public class Principal : MonoBehaviour
     void Update()
     {
         if(Input.anyKeyDown){
-            if(!comecou){
-                comecou = true;
-                InvokeRepeating("CriaCerca", 1, 0.4f);
-                InvokeRepeating("CriaObstaculo", 1, 0.75f);
+            if(!acabou){
+                if(!comecou){
+                    comecou = true;
+                    InvokeRepeating("CriaCerca", 1, 0.4f);
+                    InvokeRepeating("CriaObstaculo", 1, 0.75f);
 
-                jogadorFelpudo.GetComponent<Rigidbody>().useGravity = true;
-                jogadorFelpudo.GetComponent<Rigidbody>().isKinematic = false;
+                    jogadorFelpudo.GetComponent<Rigidbody>().useGravity = true;
+                    jogadorFelpudo.GetComponent<Rigidbody>().isKinematic = false;
 
-                textoScore.text = pontuacao.ToString();
-                textoScore.fontSize = 70;
-            }
+                    textoScore.text = pontuacao.ToString();
+                    textoScore.fontSize = 70;
+                }
             VoaFelpudo();
+            }
         }
         jogadorFelpudo.transform.rotation = Quaternion.Euler(jogadorFelpudo.GetComponent<Rigidbody>().velocity.y* -3,0,0); 
     }
@@ -75,9 +78,20 @@ public class Principal : MonoBehaviour
         jogadorFelpudo.GetComponent<Rigidbody>().velocity = new Vector3(0.0f, 10.0f,0.0f);
     }
 
-    void FimDeJogo(){}
     void MarcaPonto(){
         pontuacao++;
         textoScore.text = pontuacao.ToString();
     }
+    void FimDeJogo(){
+        acabou = true;
+        CancelInvoke("CriaCerca");
+        CancelInvoke("CriaObstaculo");
+        Invoke("RecageraCena", 2);
+    }
+    void RecageraCena(){
+        //Application.LoadLevel("SampleScene");
+        SceneManager.LoadScene("SampleScene");
+    } 
+
+    
 }
